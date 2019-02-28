@@ -1,0 +1,6 @@
+<div class="container" (click)="selectImage(index)">
+  <div class="card">
+    <div class="thumbnail" [style.background-image]="'url(' + image.urls.thumb + ')'"></div>
+    <p [title]="image?.description">{{image?.description}}</p>
+  </div>
+</div>
