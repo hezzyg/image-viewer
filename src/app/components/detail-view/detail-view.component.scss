@@ -1,0 +1,51 @@
+.container {
+  height: 100%;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f1f1f1;
+
+  .description-input {
+    width: 90%;
+    max-width: 100%;
+    font-size: 1.4em;
+    margin-bottom: 1em;
+    padding: 0.23em;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+  }
+
+  .full-image {
+    max-height: 70vh;
+    max-width: 100%;
+    border-radius: 3px;
+    transition: all .3s;
+  }
+
+  .delete-button {
+    align-self: flex-end;
+    margin: 2em;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    border: none;
+    padding: 0.25em;
+    background-color: white;
+    opacity: 0.5;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+      background-color: #e25b52;
+      box-shadow: 0px 2px 14px 0px rgba(57, 57, 57, 0.9);
+    }
+
+    img {
+      width: 80%;
+    }
+  }
+}

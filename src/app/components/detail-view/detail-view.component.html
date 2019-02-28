@@ -1,0 +1,13 @@
+<div class="container">
+  <input
+    class="description-input"
+    type="text"
+    placeholder="Add a description for this image"
+    [(ngModel)]="image.description"
+    (change)="handleDescriptionChange()"
+    (keyup)="handleDescriptionChange()">
+  <img class="full-image" [class.fade]="fadeImageAnimation" [src]="image?.urls.regular">
+  <button class="delete-button" title="Delete image" (click)="deleteImage(index)">
+    <img src="https://image.flaticon.com/icons/png/128/25/25214.png" />
+  </button>
+</div>
