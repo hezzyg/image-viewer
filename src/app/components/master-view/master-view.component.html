@@ -1,0 +1,8 @@
+<div class="container">
+  <iv-thumbnail
+    [image]="image"
+    [index]="index"
+    [selectImage]="handleSelectImage"
+    *ngFor="let image of images; let index = index; trackBy: trackByFn">
+  </iv-thumbnail>
+</div>
