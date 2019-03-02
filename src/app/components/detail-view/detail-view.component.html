@@ -1,14 +1,22 @@
-<div class="container">
-  <input
-    class="description-input"
-    type="text"
-    placeholder="Add a description for this image"
-    title="Click to edit the description"
-    [(ngModel)]="image.description"
-    (change)="handleDescriptionChange()"
-    (keyup)="handleDescriptionChange()">
-  <img class="full-image" [class.fade]="fadeImageAnimation" [src]="image?.urls.regular">
+<div class="background">
+  <div class="container">
+    <img class="full-image" [class.fade]="fadeImageAnimation" [src]="image?.urls.regular">
+    <div class="input-wrapper">
+      <input
+        class="description-input"
+        type="text"
+        placeholder="Add a description for this image"
+        title="Click to edit the description"
+        [(ngModel)]="image.description"
+        (change)="handleDescriptionChange()"
+        (keyup)="handleDescriptionChange()">
+      <div class="edit-icon">
+        <img src="../../../assets/icons/pen.png">
+      </div>
+    </div>
+    <iv-info [image]="image"></iv-info>
+    <button class="delete-button" title="Delete image" (click)="deleteImage(index)">
+      <img src="../../../assets/icons/trash.png" />
+    </button>
+  </div>
 </div>
-<button class="delete-button" title="Delete image" (click)="deleteImage(index)">
-  <img src="https://image.flaticon.com/icons/png/128/25/25214.png" />
-</button>

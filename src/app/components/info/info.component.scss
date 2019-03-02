@@ -1,0 +1,18 @@
+.info-table {
+
+  .row {
+    width: 100%;
+    display: flex;
+
+    .title, .data {
+      flex: 1 0 50%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .title {
+      font-weight: bold;
+    }
+  }
+}

@@ -1,44 +1,75 @@
-.container {
+.background {
   height: 100%;
-  padding: 0.5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: hidden;
+  text-align: center;
   background-color: #f1f1f1;
 
-  .description-input {
-    width: 90%;
-    max-width: 100%;
-    font-size: 1.4em;
-    margin-bottom: 1em;
-    padding: 0.23em;
-    text-align: center;
-    border: none;
-    background-color: transparent;
-  }
+  .container {
+    height: 100%;
+    padding: 0.5em;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    text-align: left;
 
-  .full-image {
-    max-height: 70vh;
-    max-width: 100%;
-    border-radius: 3px;
-    margin-top: 4vh;
-    transition: all .3s;
-  }
+    .input-wrapper {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 1em 0;
 
+      &:hover {
+        .edit-icon {
+          opacity: 0.4;
+        }
+      }
+
+      .description-input {
+        flex-basis: 100%;
+        max-width: 100%;
+        font-size: 1.4em;
+        font-weight: bold;
+        padding: 0.23em;
+        text-overflow: ellipsis;
+        border: none;
+        background-color: transparent;
+      }
+
+      .edit-icon {
+        opacity: 0;
+        flex-basis: 1.5em;
+        padding: 0.1em;
+        transition: all .4s ease-in-out;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .full-image {
+      max-height: 60vh;
+      max-width: 100%;
+      border-radius: 3px;
+      margin-top: 1vh;
+      transition: all .3s;
+    }
+
+    iv-info {
+      width: 100%;
+    }
+
+  }
 }
 
 .delete-button {
-  position: fixed;
-  bottom: 1em;
-  right: 0;
-  margin: 2em;
-  width: 3em;
-  height: 3em;
+  align-self: flex-end;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: none;
-  padding: 0.25em;
+  padding: 6px;
   background-color: white;
   opacity: 0.5;
   transition: all .2s ease-in-out;
@@ -50,18 +81,23 @@
   }
 
   img {
-    width: 80%;
+    width: 25px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .container .full-image {
-    max-height: 50vh;
+  .background .container {
+    .input-wrapper .description-input {
+      font-size: 1.1em;
+    }
+
+    .full-image {
+      max-height: 50vh;
+    }
   }
 
   .delete-button {
     position: relative;
-    bottom: 6em;
-    left: 0;
+    bottom: 34px;
   }
 }

@@ -9,13 +9,15 @@ import {MasterViewComponent} from './components/master-view/master-view.componen
 import {DetailViewComponent} from './components/detail-view/detail-view.component';
 import {ThumbnailComponent} from './components/thumbnail/thumbnail.component';
 import {FormsModule} from '@angular/forms';
+import {InfoComponent} from './components/info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MasterViewComponent,
     DetailViewComponent,
-    ThumbnailComponent
+    ThumbnailComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
